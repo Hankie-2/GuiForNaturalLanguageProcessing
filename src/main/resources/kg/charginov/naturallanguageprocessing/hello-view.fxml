@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.charginov.naturallanguageprocessing.HelloController">
+  <tabs>
+    <Tab fx:id="generationTab" text="Text Generation">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="176.0" text="Text Generation">
+                     <font>
+                        <Font name="Segoe UI Light" size="37.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="textgenerationTextArea" layoutX="15.0" layoutY="54.0" prefHeight="116.0" prefWidth="570.0" promptText="Write a text" />
+                  <Text fx:id="generatedText" layoutX="15.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="570.936767578125" />
+                  <Button fx:id="generationButton" layoutX="509.0" layoutY="14.0" mnemonicParsing="false" onAction="#onTextGenerationButtonClick" text="Generation" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab fx:id="summarizationTab" text="Summarization">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="190.0" layoutY="14.0" text="Summarization">
+                     <font>
+                        <Font name="Segoe UI Light" size="37.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="summarizationTextArea" layoutX="14.0" layoutY="68.0" prefHeight="116.0" prefWidth="570.0" promptText="Write a text" />
+                  <Text fx:id="summarizationedText" layoutX="15.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="570.9367065429688" />
+                  <Button fx:id="summarizationButton" layoutX="490.0" layoutY="28.0" mnemonicParsing="false" onAction="#onSummarizationButtonClick" text="Summarization" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="fillmaskTab" text="Fill Mask">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="220.0" text="Fill Mask">
+                     <font>
+                        <Font name="Segoe UI Light" size="37.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="fillmaskTextArea" layoutX="15.0" layoutY="54.0" prefHeight="116.0" prefWidth="570.0" promptText="Write a text with a mask [MASK]" />
+                  <Text fx:id="fillmaskedText" layoutX="12.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="575.7366638183594" />
+                  <Button fx:id="fillmaskButton" layoutX="523.0" layoutY="14.0" mnemonicParsing="false" onAction="#onFillMaskButtonClick" text="Fill Mask" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    <Tab fx:id="predictionTab" text="Prediction">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="185.0" layoutY="1.0" text="Text Prediction">
+                     <font>
+                        <Font name="Segoe UI Light" size="37.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="predictionTextArea" layoutX="14.0" layoutY="62.0" prefHeight="174.0" prefWidth="570.0" promptText="Write a text" />
+                  <Text fx:id="predictedText" layoutX="316.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="204.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Predicted:">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="24.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="predictionButton" layoutX="510.0" layoutY="28.0" mnemonicParsing="false" onAction="#onPredictionButtonClick" text="Prediction" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
